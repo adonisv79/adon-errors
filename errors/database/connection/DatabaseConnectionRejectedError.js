@@ -3,9 +3,9 @@ var path = require('path');
 //get file name without extension
 var scriptName = path.basename(__filename);
 scriptName = scriptName.substring(0, scriptName.length-3);
-const DatabaseConnectionError = require('./../DatabaseConnectionError');
+const DatabaseConnectionError = require('./DatabaseConnectionError');
 
-class DatabaseConnectionError extends DatabaseConnectionError{
+class DatabaseConnectionRejectedError extends DatabaseConnectionError{
 	constructor(msg){
 		super(msg);
 		this.name = scriptName;
@@ -13,4 +13,4 @@ class DatabaseConnectionError extends DatabaseConnectionError{
 	}
 }
 
-module.exports = DatabaseConnectionError;
+module.exports = DatabaseConnectionRejectedError;

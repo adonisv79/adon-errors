@@ -3,7 +3,7 @@ var path = require('path');
 //get file name without extension
 var scriptName = path.basename(__filename);
 scriptName = scriptName.substring(0, scriptName.length-3);
-const AuthorizationError = require('./../AuthorizationError');
+const AuthorizationError = require('./AuthorizationError');
 
 class AuthorizationAccessError extends AuthorizationError{
 	constructor(msg){

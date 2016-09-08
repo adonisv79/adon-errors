@@ -3,14 +3,13 @@ var path = require('path');
 //get file name without extension
 var scriptName = path.basename(__filename);
 scriptName = scriptName.substring(0, scriptName.length-3);
-const InputError = require('./InputError');
 
-class InputRequiredError extends InputError{
+class CommandError extends Error{
 	constructor(msg){
 		super(msg);
 		this.name = scriptName;
-		this.desc = "An InputError that occurs whenever a required input was undefined or null";
+		this.desc = "A Command related error";
 	}
 }
 
-module.exports = InputRequiredError;
+module.exports = CommandError;

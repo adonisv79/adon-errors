@@ -1,6 +1,6 @@
 {
   "name": "adon-errors",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A common library of error classes that can be used for all node products",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,5 @@
   "author": "Adonis Lee Villamor <adonisv79@gmail.com> (http://www.bytecommander.com)",
   "license": "MIT",
   "dependencies": {
-    "require-all": "^2.0.0"
   }
 }

@@ -14,6 +14,7 @@ module.exports = {
 			DatabaseConnectionRejectedError: require('./errors/database/connection/DatabaseConnectionRejectedError'),
 		},
 		result: {
+			DatabaseResultCreateError: require('./errors/database/result/DatabaseResultCreateError'),
 			DatabaseResultDisabledError: require('./errors/database/result/DatabaseResultDisabledError'),
 			DatabaseResultError: require('./errors/database/result/DatabaseResultError'),
 			DatabaseResultNotFoundError: require('./errors/database/result/DatabaseResultNotFoundError'),
@@ -40,6 +41,7 @@ module.exports = {
 	},
 	session: {
 		SessionError: require('./errors/session/SessionError'),
+		SessionNotFoundError: require('./errors/session/SessionNotFoundError')
 	}
 }
 

@@ -1,7 +1,6 @@
 "use strict";
 
 module.exports = {
-	throw: throwError,
 	AdonError: require('./errors/AdonError'),
 	command: {
 		CommandError: require('./errors/command/CommandError'),

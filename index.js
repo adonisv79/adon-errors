@@ -2,6 +2,7 @@
 
 module.exports = {
 	throw: throwError,
+	AdonError: require('./errors/AdonError'),
 	command: {
 		CommandError: require('./errors/command/CommandError'),
 		CommandInvalidError: require('./errors/command/CommandInvalidError'),
@@ -43,13 +44,4 @@ module.exports = {
 		SessionError: require('./errors/session/SessionError'),
 		SessionNotFoundError: require('./errors/session/SessionNotFoundError')
 	}
-}
-
-/**
- * Work in progress! this will throw an error based on the error type
- * @param error_type an available adon-error type, defaults to a standard Error
- * @param message the error message
- */
-function throwError (error_type, message){
-	throw new Error(message);
-}
+};

@@ -1,10 +1,10 @@
-"use strict"
-var path = require('path');
-//get file name without extension
-var scriptName = path.basename(__filename);
+"use strict";
+const path = require('path');
+const AdonError = require('./../AdonError');
+let scriptName = path.basename(__filename);
 scriptName = scriptName.substring(0, scriptName.length-3);
 
-class SecurityError extends Error{
+class SecurityError extends AdonError{
 	constructor(msg){
 		super(msg);
 		this.name = scriptName;
